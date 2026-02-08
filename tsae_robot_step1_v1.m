@@ -43,11 +43,11 @@ for j = 1:Ny
     end
 end
 
-X = input('X: ');
-Y = input('Y: ');
+I = input('Col I: ');
+J = input('Row J: ');
 
-x = (2*X -1)*px/2 + w/2 + a + b;
-y = (2*Y - Ny - 1)*py/2;
+x = (2*I - 1)*px/2 + w/2 + a + b;
+y = (2*J - Ny - 1)*py/2;
 R = sqrt(x^2 + y^2)
 phi1 = atan2d(y,x);
 theta1 = phi1+90
