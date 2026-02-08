@@ -35,6 +35,7 @@ plot(base(:,1),base(:,2))
 plot(table(:,1),table(:,2))
 plot(frame(:,1),frame(:,2))
 
+% Plot the grid
 for j = 1:Ny
     for i = 1:Nx
         xPos = (2*i -1)*px/2  + w/2 + a + b;
@@ -43,6 +44,7 @@ for j = 1:Ny
     end
 end
 
+% Input and plot the target
 I = input('Col I: ');
 J = input('Row J: ');
 
