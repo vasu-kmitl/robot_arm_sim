@@ -5,8 +5,8 @@
 clc; clear; close all; format compact
 
 % Basic Geometry
-w  = 20;  h  = 20;
-a  =  30;  b  =  5;  c = 5; 
+w  = 40;  h  = 40;
+a  = 10;  b  = 20;  c = 20; 
 W  = 50;  H  = 50;
 Nx =  5;  Ny =  5;
 px = W/Nx; py = H/Ny;
@@ -37,7 +37,7 @@ plot(frame(:,1),frame(:,2))
 
 for j = 1:Ny
     for i = 1:Nx
-        xPos = (2*i + 1)*px/2  + a + b;
+        xPos = (2*i -1)*px/2  + w/2 + a + b;
         yPos = (2*j - Ny - 1)*py/2;
         plot(xPos, yPos, 'ro'); 
     end
@@ -46,7 +46,7 @@ end
 X = input('X: ');
 Y = input('Y: ');
 
-x = (2*X + 1)*px/2  + a + b;
+x = (2*X -1)*px/2 + w/2 + a + b;
 y = (2*Y - Ny - 1)*py/2;
 R = sqrt(x^2 + y^2)
 phi1 = atan2d(y,x);
